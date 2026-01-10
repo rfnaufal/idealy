@@ -43,6 +43,7 @@ def add_products():
 
     if not all_valid:
         print("One or more sizes are invalid")
+        return
     else:
         add_category = str(input("Enter Category: "))
    
