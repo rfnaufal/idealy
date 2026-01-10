@@ -100,6 +100,7 @@ def update_products():
     else:
         print("Price not updated.")
 
+    updated_selected_sizes = p["sizes"]
     updated_size = str(input("Enter New Size: ")).upper().strip()
     if updated_size:
         updated_selected_sizes = []
@@ -196,11 +197,53 @@ def main():
                 else: 
                     print("❌ Please enter a valid option!")
         elif menu == 2 :
-            add_products()
+            while True:
+                print("\n========================================")
+                print("Add New Product")
+                print("========================================")
+                print("\n")
+                print("Add Product Option :")
+                print("1. Add Product")
+                print("2. Back to Main Menu")
+                add_menu = int(input("Choose an Option :  "))
+                if add_menu == 1:
+                    add_products()
+                elif add_menu == 2:
+                    break
+                else: 
+                    print("❌ Please enter a valid option!")
         elif menu == 3 :
-            update_products()
+            while True:
+                print("\n========================================")
+                print("Update Product")
+                print("========================================")
+                print("\n")
+                print("Update Option :")
+                print("1. Update Product by ID")
+                print("2. Back to Main Menu")
+                update_menu = int(input("Choose an Option :  "))
+                if update_menu == 1:
+                    update_products()
+                elif update_menu == 2:
+                    break
+                else: 
+                    print("❌ Please enter a valid option!")
         elif menu == 4 :
-            remove_products()
+            while True:
+                print("\n========================================")
+                print("Delete Product")
+                print("========================================")
+                print("\n")
+                print("Delete Option :")
+                print("1. Delete Product by ID")
+                print("2. Back to Main Menu")
+                delete_menu = int(input("Choose an Option :  "))
+                if delete_menu == 1:
+                    remove_products()
+                elif delete_menu == 2:
+                    break
+                else: 
+                    print("❌ Please enter a valid option!")
         elif menu == 5 :
             break
         else:
