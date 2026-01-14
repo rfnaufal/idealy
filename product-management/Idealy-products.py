@@ -78,7 +78,7 @@ def update_products():
 
     pid = str(input("Enter Product ID: "))
     if pid not in products:
-        print("Invalid Product ID")
+        print("❌ Invalid Product ID")
         return
     
     p = products[pid] #refer to key of dic = product id
@@ -139,7 +139,7 @@ def remove_products():
 
     pid = str(input("Enter Product ID: "))
     if pid not in products:
-        print("Invalid Product ID")
+        print("❌ Invalid Product ID")
         return
     del_product = products.pop(pid, None)
     print(f"\nProduct ID {pid} has been successfully Removed\n")
@@ -152,7 +152,7 @@ def searchbyid():
 
     pid = str(input("Enter Product ID: "))
     if pid not in products:
-        print("Invalid Product ID")
+        print("❌ Invalid Product ID")
         return
     sp = products.get(pid)
     #print(f"{search_product}")
