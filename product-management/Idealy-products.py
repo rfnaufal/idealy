@@ -206,10 +206,10 @@ def main():
                 print("Add Product Option :")
                 print("1. Add Product")
                 print("2. Back to Main Menu")
-                add_menu = int(input("Choose an Option :  "))
-                if add_menu == 1:
+                add_menu = input("Choose an Option :  ")
+                if add_menu == '1':
                     add_products()
-                elif add_menu == 2:
+                elif add_menu == '2':
                     break
                 else: 
                     print("❌ Please enter a valid option!")
